@@ -1,13 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Linq.Expressions;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Photogaleries.Data.Repositories
+﻿namespace Photogaleries.Data.Repositories
 {
-    public interface IRepository<T>
+    using System;
+    using System.Collections.Generic;
+    using System.Linq;
+    using System.Linq.Expressions;
+    using System.Text;
+    using System.Threading.Tasks;
+
+    public interface IRepository<T> where T : class
     {
         IQueryable<T> All();
 

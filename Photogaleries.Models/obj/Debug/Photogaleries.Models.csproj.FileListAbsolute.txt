@@ -21,3 +21,26 @@ C:\Users\ShOnZi\Desktop\TelerikAcademy\Web Services & Cloud\Homeworks\WebAPI\Pho
 C:\Users\ShOnZi\Desktop\TelerikAcademy\Web Services & Cloud\Homeworks\WebAPI\Photogaleries.Services\Photogaleries.Models\bin\Debug\Newtonsoft.Json.xml
 C:\Users\ShOnZi\Desktop\TelerikAcademy\Web Services & Cloud\Homeworks\WebAPI\Photogaleries.Services\Photogaleries.Models\obj\Debug\Photogaleries.Models.dll
 C:\Users\ShOnZi\Desktop\TelerikAcademy\Web Services & Cloud\Homeworks\WebAPI\Photogaleries.Services\Photogaleries.Models\obj\Debug\Photogaleries.Models.pdb
+C:\Users\Evil-A\Documents\GitHub\Salal-berry-Team-Project\Photogaleries.Models\bin\Debug\Photogaleries.Models.dll.config
+C:\Users\Evil-A\Documents\GitHub\Salal-berry-Team-Project\Photogaleries.Models\bin\Debug\Photogaleries.Models.dll
+C:\Users\Evil-A\Documents\GitHub\Salal-berry-Team-Project\Photogaleries.Models\bin\Debug\Photogaleries.Models.pdb
+C:\Users\Evil-A\Documents\GitHub\Salal-berry-Team-Project\Photogaleries.Models\bin\Debug\EntityFramework.dll
+C:\Users\Evil-A\Documents\GitHub\Salal-berry-Team-Project\Photogaleries.Models\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Evil-A\Documents\GitHub\Salal-berry-Team-Project\Photogaleries.Models\bin\Debug\Microsoft.AspNet.Identity.Core.dll
+C:\Users\Evil-A\Documents\GitHub\Salal-berry-Team-Project\Photogaleries.Models\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Users\Evil-A\Documents\GitHub\Salal-berry-Team-Project\Photogaleries.Models\bin\Debug\Microsoft.Owin.dll
+C:\Users\Evil-A\Documents\GitHub\Salal-berry-Team-Project\Photogaleries.Models\bin\Debug\Microsoft.Owin.Security.dll
+C:\Users\Evil-A\Documents\GitHub\Salal-berry-Team-Project\Photogaleries.Models\bin\Debug\Microsoft.Owin.Security.MicrosoftAccount.dll
+C:\Users\Evil-A\Documents\GitHub\Salal-berry-Team-Project\Photogaleries.Models\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Evil-A\Documents\GitHub\Salal-berry-Team-Project\Photogaleries.Models\bin\Debug\Owin.dll
+C:\Users\Evil-A\Documents\GitHub\Salal-berry-Team-Project\Photogaleries.Models\bin\Debug\EntityFramework.xml
+C:\Users\Evil-A\Documents\GitHub\Salal-berry-Team-Project\Photogaleries.Models\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Evil-A\Documents\GitHub\Salal-berry-Team-Project\Photogaleries.Models\bin\Debug\Microsoft.AspNet.Identity.Core.xml
+C:\Users\Evil-A\Documents\GitHub\Salal-berry-Team-Project\Photogaleries.Models\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\Users\Evil-A\Documents\GitHub\Salal-berry-Team-Project\Photogaleries.Models\bin\Debug\Microsoft.Owin.xml
+C:\Users\Evil-A\Documents\GitHub\Salal-berry-Team-Project\Photogaleries.Models\bin\Debug\Microsoft.Owin.Security.xml
+C:\Users\Evil-A\Documents\GitHub\Salal-berry-Team-Project\Photogaleries.Models\bin\Debug\Microsoft.Owin.Security.MicrosoftAccount.xml
+C:\Users\Evil-A\Documents\GitHub\Salal-berry-Team-Project\Photogaleries.Models\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Evil-A\Documents\GitHub\Salal-berry-Team-Project\Photogaleries.Models\obj\Debug\Photogaleries.Models.csprojResolveAssemblyReference.cache
+C:\Users\Evil-A\Documents\GitHub\Salal-berry-Team-Project\Photogaleries.Models\obj\Debug\Photogaleries.Models.dll
+C:\Users\Evil-A\Documents\GitHub\Salal-berry-Team-Project\Photogaleries.Models\obj\Debug\Photogaleries.Models.pdb

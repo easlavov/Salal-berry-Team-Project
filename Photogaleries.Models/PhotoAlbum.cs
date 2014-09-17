@@ -1,12 +1,27 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Photogaleries.Models
+﻿namespace Photogaleries.Models
 {
+    using System.Collections.Generic;
+    using System.ComponentModel.DataAnnotations;
+
     public class PhotoAlbum
     {
+        private ICollection<Photo> photos;
+
+        public PhotoAlbum()
+        {
+            this.photos = new HashSet<Photo>();
+        }
+        public int Id { get; set; }
+
+        [Required]
+        public string Name { get; set; }
+
+        public int UserId { get; set; }
+
+        public virtual ICollection<Photo> Photos
+        {
+            get { return this.photos; }
+            set { this.photos = value; }
+        }
     }
 }
