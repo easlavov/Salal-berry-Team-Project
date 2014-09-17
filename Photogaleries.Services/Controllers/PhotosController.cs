@@ -36,6 +36,7 @@ namespace Photogaleries.Services.Controllers
             return Ok(photo);
         }
 
+        [Authorize]
         [HttpPost]
         public IHttpActionResult Create(PhotoModel photo)
         {
@@ -55,6 +56,7 @@ namespace Photogaleries.Services.Controllers
             return this.Ok(newCourse);
         }
         
+        [Authorize]
         [HttpDelete]
         public IHttpActionResult Delete(int id)
         {
@@ -75,19 +77,19 @@ namespace Photogaleries.Services.Controllers
         [HttpPost]
         public IHttpActionResult AddComment(int id, int commentId)
         {
-            var course = this.Data.Photos.All().FirstOrDefault(s => s==s);
-            if (course == null)
+            var photo = this.Data.Photos.All().FirstOrDefault(s => s == s);
+            if (photo == null)
             {
                 return this.BadRequest("Such photo does not exists - invalid id!");
             }
 
-            var homework = this.Data.Comments.All().FirstOrDefault(c=>c==c);
-            if (homework == null)
+            var comment = this.Data.Comments.All().FirstOrDefault(c => c == c);
+            if (comment == null)
             {
                 return this.BadRequest("Such comment does not exists - invalid id!");
             }
 
-            //course.Comments.Add(homework);
+            //photo.Comments.Add(comment);
             this.Data.SaveChanges();
 
             return this.Ok();

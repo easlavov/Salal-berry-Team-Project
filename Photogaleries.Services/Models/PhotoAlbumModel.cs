@@ -9,7 +9,7 @@ namespace Photogaleries.Services.Models
 {
     public class PhotoAlbumModel
     {
-        public static Expression<Func<PhotoAlbum, PhotoAlbumModel>> FromPhoyoAlbum
+        public static Expression<Func<PhotoAlbum, PhotoAlbumModel>> FromPhotoAlbum
         {
             get
             {
