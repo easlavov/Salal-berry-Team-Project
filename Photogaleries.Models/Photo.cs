@@ -16,17 +16,28 @@ namespace Photogaleries.Models
             this.comments = new HashSet<Comment>();
         }
 
+        [Key]
         public int Id { get; set; }
 
         [Required]
         public string Name { get; set; }
 
-        public int PhotoAlbumId { get; set; }
+        public string Url { get; set; }
+
+        public int? PhotoAlbumId { get; set; }
+
+        public virtual PhotoAlbum PhotoAlbum { get; set; }
 
         public virtual ICollection<Comment> Comments
         {
-            get { return this.comments; }
-            set { this.comments = value; }
+            get
+            {
+                return this.comments;
+            }
+            set
+            {
+                this.comments = value;
+            }
         }
     }
 }

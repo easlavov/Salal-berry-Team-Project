@@ -11,37 +11,68 @@ namespace Photogaleries.Data
 {
     public class PhotogaleriesData : IPhotogaleriesData
     {
-        
+        private readonly DbContext context;
+
+        private readonly IDictionary<Type, object> repositories;
+
+        public PhotogaleriesData():this(new PhotogaleriesDbContext())
+        {
+
+        }
+
+        public PhotogaleriesData(DbContext context)
+        {
+            this.context = context;
+            this.repositories = new Dictionary<Type, object>();
+        }
+
         public IRepository<Photo> Photos
         {
-            get { throw new NotImplementedException(); }
+            get
+            {
+                return this.GetRepository<Photo>();
+            }
         }
 
         public IRepository<PhotoAlbum> PhotoAlbums
         {
-            get { throw new NotImplementedException(); }
+            get
+            {
+                return this.GetRepository<PhotoAlbum>();
+            }
         }
 
         public IRepository<Comment> Comments
         {
-            get { throw new NotImplementedException(); }
+            get
+            {
+                return this.GetRepository<Comment>();
+            }
         }
 
         public IRepository<User> Users
         {
             get
             {
-                throw new NotImplementedException();
-            }
-            set
-            {
-                throw new NotImplementedException();
+                return this.GetRepository<User>();
             }
         }
 
         public int SaveChanges()
         {
-            throw new NotImplementedException();
+            return this.context.SaveChanges();
+        }
+
+        private IRepository<T> GetRepository<T>() where T : class
+        {
+            var typeOfRepository = typeof(T);
+            if (!this.repositories.ContainsKey(typeOfRepository))
+            {
+                var newRepository = Activator.CreateInstance(typeof(Repository<T>), context);
+                this.repositories.Add(typeOfRepository, newRepository);
+            }
+
+            return (IRepository<T>)this.repositories[typeOfRepository];
         }
     }
 }

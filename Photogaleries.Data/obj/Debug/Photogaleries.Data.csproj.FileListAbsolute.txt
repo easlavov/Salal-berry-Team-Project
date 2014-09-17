@@ -14,22 +14,6 @@ C:\Users\ShOnZi\Desktop\TelerikAcademy\Web Services & Cloud\Homeworks\WebAPI\Pho
 C:\Users\ShOnZi\Desktop\TelerikAcademy\Web Services & Cloud\Homeworks\WebAPI\Photogaleries.Services\Photogaleries.Data\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.xml
 C:\Users\ShOnZi\Desktop\TelerikAcademy\Web Services & Cloud\Homeworks\WebAPI\Photogaleries.Services\Photogaleries.Data\bin\Debug\Photogaleries.Models.dll
 C:\Users\ShOnZi\Desktop\TelerikAcademy\Web Services & Cloud\Homeworks\WebAPI\Photogaleries.Services\Photogaleries.Data\bin\Debug\Photogaleries.Models.pdb
-C:\Users\ShOnZi\Desktop\TelerikAcademy\Web Services & Cloud\Homeworks\Photogaleries\Photogaleries.Data\bin\Debug\Photogaleries.Data.dll.config
-C:\Users\ShOnZi\Desktop\TelerikAcademy\Web Services & Cloud\Homeworks\Photogaleries\Photogaleries.Data\bin\Debug\Photogaleries.Data.dll
-C:\Users\ShOnZi\Desktop\TelerikAcademy\Web Services & Cloud\Homeworks\Photogaleries\Photogaleries.Data\bin\Debug\Photogaleries.Data.pdb
-C:\Users\ShOnZi\Desktop\TelerikAcademy\Web Services & Cloud\Homeworks\Photogaleries\Photogaleries.Data\bin\Debug\EntityFramework.dll
-C:\Users\ShOnZi\Desktop\TelerikAcademy\Web Services & Cloud\Homeworks\Photogaleries\Photogaleries.Data\bin\Debug\EntityFramework.SqlServer.dll
-C:\Users\ShOnZi\Desktop\TelerikAcademy\Web Services & Cloud\Homeworks\Photogaleries\Photogaleries.Data\bin\Debug\Microsoft.AspNet.Identity.Core.dll
-C:\Users\ShOnZi\Desktop\TelerikAcademy\Web Services & Cloud\Homeworks\Photogaleries\Photogaleries.Data\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.dll
-C:\Users\ShOnZi\Desktop\TelerikAcademy\Web Services & Cloud\Homeworks\Photogaleries\Photogaleries.Data\bin\Debug\Photogaleries.Models.dll
-C:\Users\ShOnZi\Desktop\TelerikAcademy\Web Services & Cloud\Homeworks\Photogaleries\Photogaleries.Data\bin\Debug\Photogaleries.Models.pdb
-C:\Users\ShOnZi\Desktop\TelerikAcademy\Web Services & Cloud\Homeworks\Photogaleries\Photogaleries.Data\bin\Debug\EntityFramework.xml
-C:\Users\ShOnZi\Desktop\TelerikAcademy\Web Services & Cloud\Homeworks\Photogaleries\Photogaleries.Data\bin\Debug\EntityFramework.SqlServer.xml
-C:\Users\ShOnZi\Desktop\TelerikAcademy\Web Services & Cloud\Homeworks\Photogaleries\Photogaleries.Data\bin\Debug\Microsoft.AspNet.Identity.Core.xml
-C:\Users\ShOnZi\Desktop\TelerikAcademy\Web Services & Cloud\Homeworks\Photogaleries\Photogaleries.Data\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.xml
-C:\Users\ShOnZi\Desktop\TelerikAcademy\Web Services & Cloud\Homeworks\Photogaleries\Photogaleries.Data\obj\Debug\Photogaleries.Data.csprojResolveAssemblyReference.cache
-C:\Users\ShOnZi\Desktop\TelerikAcademy\Web Services & Cloud\Homeworks\Photogaleries\Photogaleries.Data\obj\Debug\Photogaleries.Data.dll
-C:\Users\ShOnZi\Desktop\TelerikAcademy\Web Services & Cloud\Homeworks\Photogaleries\Photogaleries.Data\obj\Debug\Photogaleries.Data.pdb
 C:\Users\Evil-A\Documents\GitHub\Salal-berry-Team-Project\Photogaleries.Data\bin\Debug\Photogaleries.Data.dll.config
 C:\Users\Evil-A\Documents\GitHub\Salal-berry-Team-Project\Photogaleries.Data\bin\Debug\Photogaleries.Data.dll
 C:\Users\Evil-A\Documents\GitHub\Salal-berry-Team-Project\Photogaleries.Data\bin\Debug\Photogaleries.Data.pdb
@@ -46,3 +30,19 @@ C:\Users\Evil-A\Documents\GitHub\Salal-berry-Team-Project\Photogaleries.Data\bin
 C:\Users\Evil-A\Documents\GitHub\Salal-berry-Team-Project\Photogaleries.Data\obj\Debug\Photogaleries.Data.csprojResolveAssemblyReference.cache
 C:\Users\Evil-A\Documents\GitHub\Salal-berry-Team-Project\Photogaleries.Data\obj\Debug\Photogaleries.Data.dll
 C:\Users\Evil-A\Documents\GitHub\Salal-berry-Team-Project\Photogaleries.Data\obj\Debug\Photogaleries.Data.pdb
+C:\Users\ShOnZi\Desktop\TelerikAcademy\Web Services & Cloud\Homeworks\Photogaleries\Photogaleries.Data\bin\Debug\Photogaleries.Data.dll.config
+C:\Users\ShOnZi\Desktop\TelerikAcademy\Web Services & Cloud\Homeworks\Photogaleries\Photogaleries.Data\bin\Debug\Photogaleries.Data.dll
+C:\Users\ShOnZi\Desktop\TelerikAcademy\Web Services & Cloud\Homeworks\Photogaleries\Photogaleries.Data\bin\Debug\Photogaleries.Data.pdb
+C:\Users\ShOnZi\Desktop\TelerikAcademy\Web Services & Cloud\Homeworks\Photogaleries\Photogaleries.Data\bin\Debug\EntityFramework.dll
+C:\Users\ShOnZi\Desktop\TelerikAcademy\Web Services & Cloud\Homeworks\Photogaleries\Photogaleries.Data\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\ShOnZi\Desktop\TelerikAcademy\Web Services & Cloud\Homeworks\Photogaleries\Photogaleries.Data\bin\Debug\Microsoft.AspNet.Identity.Core.dll
+C:\Users\ShOnZi\Desktop\TelerikAcademy\Web Services & Cloud\Homeworks\Photogaleries\Photogaleries.Data\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Users\ShOnZi\Desktop\TelerikAcademy\Web Services & Cloud\Homeworks\Photogaleries\Photogaleries.Data\bin\Debug\Photogaleries.Models.dll
+C:\Users\ShOnZi\Desktop\TelerikAcademy\Web Services & Cloud\Homeworks\Photogaleries\Photogaleries.Data\bin\Debug\Photogaleries.Models.pdb
+C:\Users\ShOnZi\Desktop\TelerikAcademy\Web Services & Cloud\Homeworks\Photogaleries\Photogaleries.Data\bin\Debug\EntityFramework.xml
+C:\Users\ShOnZi\Desktop\TelerikAcademy\Web Services & Cloud\Homeworks\Photogaleries\Photogaleries.Data\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\ShOnZi\Desktop\TelerikAcademy\Web Services & Cloud\Homeworks\Photogaleries\Photogaleries.Data\bin\Debug\Microsoft.AspNet.Identity.Core.xml
+C:\Users\ShOnZi\Desktop\TelerikAcademy\Web Services & Cloud\Homeworks\Photogaleries\Photogaleries.Data\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\Users\ShOnZi\Desktop\TelerikAcademy\Web Services & Cloud\Homeworks\Photogaleries\Photogaleries.Data\obj\Debug\Photogaleries.Data.csprojResolveAssemblyReference.cache
+C:\Users\ShOnZi\Desktop\TelerikAcademy\Web Services & Cloud\Homeworks\Photogaleries\Photogaleries.Data\obj\Debug\Photogaleries.Data.dll
+C:\Users\ShOnZi\Desktop\TelerikAcademy\Web Services & Cloud\Homeworks\Photogaleries\Photogaleries.Data\obj\Debug\Photogaleries.Data.pdb

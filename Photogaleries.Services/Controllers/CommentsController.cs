@@ -43,19 +43,21 @@ namespace Photogaleries.Services.Controllers
         [HttpPost]
         public IHttpActionResult Create(CommentModel comment)
         {
-            var currentUserId = this.userIdProvider.GetUserId();
-
             if (!this.ModelState.IsValid)
             {
                 return this.BadRequest(ModelState);
             }
 
-            //Add user id to the comment and get the picture id as well...
+            var currentUserId = this.userIdProvider.GetUserId();
+
             var newComment = new Comment()
             {
-               
+                Text = comment.Text,
+                Date = comment.Date,
+                UserId = currentUserId,
+                PhotoId = comment.PhotoId
             };
-
+            
             this.Data.Comments.Add(newComment);
             this.Data.SaveChanges();
 
@@ -66,7 +68,7 @@ namespace Photogaleries.Services.Controllers
         [HttpDelete]
         public IHttpActionResult Delete(int id)
         {
-            var comment = this.Data.Comments.All().FirstOrDefault(s => s == s);
+            var comment = this.Data.Comments.All().FirstOrDefault(c => c.Id == id);
             if (comment == null)
             {
                 return this.BadRequest("Such course does not exist");

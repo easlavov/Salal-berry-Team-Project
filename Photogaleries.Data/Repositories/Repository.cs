@@ -5,10 +5,11 @@
 
     public class Repository<T> : IRepository<T> where T : class
     {
-        private DbContext context;
-        private IDbSet<T> set;
+        private readonly DbContext context;
 
-        public Repository()
+        private readonly IDbSet<T> set;
+
+        public Repository(DbContext context)
         {
             this.context = context;
             this.set = context.Set<T>();
@@ -21,7 +22,7 @@
 
         public IQueryable<T> SearchFor(System.Linq.Expressions.Expression<System.Func<T, bool>> conditions)
         {
-            throw new System.NotImplementedException();
+            return this.All().Where(conditions);
         }
 
         public void Add(T entity)
@@ -41,7 +42,8 @@
 
         public void Detach(T entity)
         {
-            throw new System.NotImplementedException();
+            var entry = this.context.Entry(entity);
+            entry.State = EntityState.Detached;
         }
 
         private void ChangeState(T entity, EntityState state)

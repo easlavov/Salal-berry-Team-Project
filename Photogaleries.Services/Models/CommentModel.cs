@@ -15,9 +15,23 @@ namespace Photogaleries.Services.Models
             {
                 return c => new CommentModel()
                 {
-                    
+                    Text=c.Text,
+                    Date=c.Date,
+                    PhotoId=c.PhotoId,
+                    UserId=c.UserId
                 };
             }
         }
+
+        public int Id { get; set; }
+
+        public string Text { get; set; }
+
+        public DateTime Date { get; set; }
+
+        public string UserId { get; set; }
+
+        public int? PhotoId { get; set; }
+        
     }
 }

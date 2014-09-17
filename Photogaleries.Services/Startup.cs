@@ -29,9 +29,9 @@ namespace Photogaleries.Services
         private static void RegisterMappings(StandardKernel kernel)
         {
             kernel.Bind<IPhotogaleriesData>()
-                  .To<IPhotogaleriesData>()
+                  .To<PhotogaleriesData>()
                   .WithConstructorArgument("context",
-                       c => new PhotogaleriesData());
+                       c => new PhotogaleriesDbContext());
         }
     }
 }

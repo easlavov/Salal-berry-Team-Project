@@ -26,7 +26,7 @@ namespace Photogaleries.Services.Controllers
         [HttpGet]
         public IHttpActionResult GetById(int id)
         {
-            var photo = this.Data.Photos.All().Where(p => p == p).Select(PhotoModel.FromPhoto).FirstOrDefault();
+            var photo = this.Data.Photos.All().Where(p => p.Id == id).Select(PhotoModel.FromPhoto).FirstOrDefault();
 
             if (photo == null)
             {
@@ -47,7 +47,9 @@ namespace Photogaleries.Services.Controllers
 
             var newCourse = new Photo()
             {
-               
+                Name = photo.Name,
+                Url = photo.Url,
+                PhotoAlbumId = photo.PhotoAlbumId
             };
 
             this.Data.Photos.Add(newCourse);
@@ -60,39 +62,20 @@ namespace Photogaleries.Services.Controllers
         [HttpDelete]
         public IHttpActionResult Delete(int id)
         {
-            var course = this.Data.Photos.All().FirstOrDefault(s => s == s);
-            if (course == null)
-            {
-                return this.BadRequest("Such course does not exist");
-            }
-            //course.Comments.Clear();            
-            //this.Data.SaveChanges();
-
-            this.Data.Photos.Delete(course);
-            this.Data.SaveChanges();
-
-            return this.Ok(course);
-        }
-
-        [HttpPost]
-        public IHttpActionResult AddComment(int id, int commentId)
-        {
-            var photo = this.Data.Photos.All().FirstOrDefault(s => s == s);
+            var photo = this.Data.Photos.All().FirstOrDefault(p => p.Id == id);
             if (photo == null)
             {
-                return this.BadRequest("Such photo does not exists - invalid id!");
+                return this.BadRequest("Such photo does not exist");
             }
 
-            var comment = this.Data.Comments.All().FirstOrDefault(c => c == c);
-            if (comment == null)
-            {
-                return this.BadRequest("Such comment does not exists - invalid id!");
-            }
-
-            //photo.Comments.Add(comment);
+            photo.Comments.Clear();            
             this.Data.SaveChanges();
 
-            return this.Ok();
+            this.Data.Photos.Delete(photo);
+            this.Data.SaveChanges();
+
+            return this.Ok(photo);
         }
+       
     }
 }

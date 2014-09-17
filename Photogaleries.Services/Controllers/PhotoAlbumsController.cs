@@ -29,7 +29,7 @@ namespace Photogaleries.Services.Controllers
         [HttpGet]
         public IHttpActionResult GetById(int id)
         {
-            var album = this.Data.PhotoAlbums.All().Where(p => p == p).Select(PhotoAlbumModel.FromPhotoAlbum).FirstOrDefault();
+            var album = this.Data.PhotoAlbums.All().Where(p => p.Id == id).Select(PhotoAlbumModel.FromPhotoAlbum).FirstOrDefault();
 
             if (album == null)
             {
@@ -43,17 +43,17 @@ namespace Photogaleries.Services.Controllers
         [HttpPost]
         public IHttpActionResult Create(PhotoAlbumModel photo)
         {
-            var currentUserId = this.userIdProvider.GetUserId();
-
             if (!this.ModelState.IsValid)
             {
                 return this.BadRequest(ModelState);
             }
 
-            //Should assign currentUserId to the created album...
+            var currentUserId = this.userIdProvider.GetUserId();
+
             var newAlbum = new PhotoAlbum()
             {
-               
+                Name = photo.Name,
+                UserId = currentUserId
             };
 
             this.Data.PhotoAlbums.Add(newAlbum);
@@ -66,39 +66,18 @@ namespace Photogaleries.Services.Controllers
         [HttpDelete]
         public IHttpActionResult Delete(int id)
         {
-            var album = this.Data.PhotoAlbums.All().FirstOrDefault(s => s == s);
+            var album = this.Data.PhotoAlbums.All().FirstOrDefault(a => a.Id == id);
             if (album == null)
             {
                 return this.BadRequest("Such album does not exist");
             }
-            //course.Albums.Clear();            
-            //this.Data.SaveChanges();
+            album.Photos.Clear();            
+            this.Data.SaveChanges();
 
             this.Data.PhotoAlbums.Delete(album);
             this.Data.SaveChanges();
 
             return this.Ok(album);
-        }
-
-        [HttpPost]
-        public IHttpActionResult AddPhoto(int id, int photoId)
-        {
-            var album = this.Data.PhotoAlbums.All().FirstOrDefault(s => s == s);
-            if (album == null)
-            {
-                return this.BadRequest("Such photoalbum does not exists - invalid id!");
-            }
-
-            var photo = this.Data.PhotoAlbums.All().FirstOrDefault(c => c == c);
-            if (photo == null)
-            {
-                return this.BadRequest("Such photo does not exists - invalid id!");
-            }
-
-            //album.Photos.Add(photo);
-            this.Data.SaveChanges();
-
-            return this.Ok();
         }
     }
 }
