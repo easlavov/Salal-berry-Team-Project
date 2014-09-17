@@ -53,6 +53,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="IPhotogaleriesData.cs" />
+    <Compile Include="PhotogaleriesData.cs" />
     <Compile Include="PhotogaleriesDbContext.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repositories\IRepository.cs" />
