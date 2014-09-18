@@ -12,16 +12,38 @@
             controller: 'models/controller',
             registerUi: 'models/register',
             register: 'models/register',
+            login: 'models/login',
             photoAlbum: 'models/photoAlbum',
             photoes: 'models/photoes'
         }
     });
 
-    require(['jquery', 'registerUi', 'sammy', 'underscore', 'handlebars'], function ($, registerUi, Sammy) {
-        var app = Sammy('#register-form', function () {
+    var CONTAINER_NAME = '#wrapper';
+
+    require(['jquery', 'register', 'login', 'sammy', 'underscore', 'handlebars'], function ($, register, login, Sammy) {
+        $(CONTAINER_NAME).on('click', '#register-init-button', function () {
+            window.location.href = '#/register'
+        });
+
+        $(CONTAINER_NAME).on('click', '#login-init-button', function () {
+            window.location.href = '#/login'
+        });
+
+        var app = Sammy(CONTAINER_NAME, function () {
+            this.get('#/home', function () {
+                $(CONTAINER_NAME).load('views/home.html');
+            });
+
             this.get("#/register", function () {
+                register.show(CONTAINER_NAME, 'views/register.html');
+                register.setEvent(CONTAINER_NAME);
+            });
+
+            this.get("#/login", function () {
+                login.show(CONTAINER_NAME, 'views/login.html');
+                login.setEvent(CONTAINER_NAME);
             });
         });
-        app.run('#/register');
+        app.run('#/home');
     });
-})()
+}())

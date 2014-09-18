@@ -67,6 +67,7 @@
     <Content Include="scripts\libs\sammy-latest.min.js" />
     <Content Include="scripts\libs\underscore-min.js" />
     <Content Include="scripts\models\http-requester.js" />
+    <Content Include="scripts\models\login.js" />
     <Content Include="scripts\models\photoAlbum.js" />
     <Content Include="scripts\models\photoes.js" />
     <Content Include="scripts\models\controller.js" />
@@ -74,6 +75,9 @@
     <Content Include="styles\styles.css">
       <DependentUpon>styles.less</DependentUpon>
     </Content>
+    <Content Include="views\register.html" />
+    <Content Include="views\login.html" />
+    <Content Include="views\home.html" />
     <Content Include="Web.config" />
     <Content Include="styles\styles.less" />
     <Content Include="styles\styles.css.map">
