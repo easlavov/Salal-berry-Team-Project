@@ -2,7 +2,6 @@
 {
     using System.Linq;
     using System.Web.Http;
-
     using Photogaleries.Data;
     using Photogaleries.Models;
     using Photogaleries.Services.Models;
@@ -23,7 +22,7 @@
         [HttpGet]
         public IHttpActionResult GetByAlbumId(int albumId)
         {
-            var photos = this.Data.Photos.All().Where(p=>p.PhotoAlbumId==albumId).Select(PhotoModel.FromPhoto);
+            var photos = this.Data.Photos.All().Where(p => p.PhotoAlbumId == albumId).Select(PhotoModel.FromPhoto);
             return this.Ok(photos);
         }
 

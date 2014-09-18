@@ -9,5 +9,5 @@
 /// <reference path="models/controller.js" />
 /// <reference path="models/http-requester.js" />
 /// <reference path="models/photoalbum.js" />
-/// <reference path="models/photoes.js" />
 /// <reference path="models/register.js" />
+/// <reference path="models/photoes.js" />

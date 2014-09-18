@@ -17,7 +17,7 @@
         }
     });
 
-    require(['jquery', 'registerUi', 'sammy', 'underscore', 'handlebars'], function ($, registerUi, Sammy) {
+    require(['jquery', 'registerUi', 'sammy', 'photoAlbum', 'underscore', 'handlebars'], function ($, registerUi, Sammy,photoAlbumUi) {
         var app = Sammy('#register-form', function () {
             this.get("#/register", function () {
             });

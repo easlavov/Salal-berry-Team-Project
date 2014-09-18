@@ -5,7 +5,9 @@
     using Photogaleries.Data;
     using Photogaleries.Models;
     using Photogaleries.Services.Models;
+    using System.Web.Http.Cors;
    
+
     public class PhotoAlbumsController : BaseApiController
     {
         private readonly AspNetUserIdProvider userIdProvider;

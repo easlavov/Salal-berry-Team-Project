@@ -68,7 +68,6 @@
     <Content Include="scripts\libs\underscore-min.js" />
     <Content Include="scripts\models\http-requester.js" />
     <Content Include="scripts\models\photoAlbum.js" />
-    <Content Include="scripts\models\photoes.js" />
     <Content Include="scripts\models\controller.js" />
     <Content Include="scripts\models\register.js" />
     <Content Include="styles\styles.css">
