@@ -57,15 +57,22 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="app.js" />
+    <Content Include="scripts\app.js" />
     <Content Include="index.html" />
     <None Include="scripts\_references.js" />
-    <Content Include="libs\handlebars-v2.0.0.js" />
-    <Content Include="libs\jquery-2.1.1.min.js" />
-    <Content Include="libs\q.js" />
-    <Content Include="libs\require.js" />
-    <Content Include="libs\sammy-latest.min.js" />
-    <Content Include="libs\underscore-min.js" />
+    <Content Include="scripts\libs\handlebars-v2.0.0.js" />
+    <Content Include="scripts\libs\jquery-2.1.1.min.js" />
+    <Content Include="scripts\libs\q.js" />
+    <Content Include="scripts\libs\require.js" />
+    <Content Include="scripts\libs\sammy-latest.min.js" />
+    <Content Include="scripts\libs\underscore-min.js" />
+    <Content Include="scripts\models\http-requester.js" />
+    <Content Include="scripts\models\photoAlbum\controller.js" />
+    <Content Include="scripts\models\photoAlbum\photoAlbum.js" />
+    <Content Include="scripts\models\photoes\controller.js" />
+    <Content Include="scripts\models\photoes\photoes.js" />
+    <Content Include="scripts\models\register\controller.js" />
+    <Content Include="scripts\models\register\register.js" />
     <Content Include="styles\styles.css">
       <DependentUpon>styles.less</DependentUpon>
     </Content>
