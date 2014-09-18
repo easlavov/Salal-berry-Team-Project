@@ -4,10 +4,10 @@
         var controller = new Controller('http://localhost:7097/api/Account/Register');
         var email = $('#email').val(),
             password = $('#password').val(),
-            confirmedPassword = $('#confirmed-password').val();
+            confirmPassword = $('#confirmed-password').val();
 
         // TODO: check confirmed password
-        controller.register(email, password);
+        controller.register(email, password, confirmPassword);
         });
     }());
 

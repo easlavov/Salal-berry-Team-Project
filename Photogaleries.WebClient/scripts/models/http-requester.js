@@ -8,12 +8,15 @@
                 type: type,
                 data: data,
                 contentType: 'application/json',
+                crossDoamin: true,
+                dataType: 'jsonp',
+                //headers: {'Access-Control-Allow-Origin:' : '*'},
                 success: function (resultData) {
                     deferred.resolve(resultData);
                 },
                 error: function (errorMsg) {
                     deferred.reject(errorMsg);
-                }
+                },
             })
 
             return deferred.promise();
@@ -22,6 +25,7 @@
         var getJSON = function (url) {
             return makeHttpRequest(url, 'GET');
         };
+
         var postJSON = function (url, data) {
             return makeHttpRequest(url, 'POST', data);
         };
