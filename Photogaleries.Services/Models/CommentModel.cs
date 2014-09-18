@@ -15,6 +15,7 @@ namespace Photogaleries.Services.Models
             {
                 return c => new CommentModel()
                 {
+                    Id=c.Id,
                     Text=c.Text,
                     Date=c.Date,
                     PhotoId=c.PhotoId,

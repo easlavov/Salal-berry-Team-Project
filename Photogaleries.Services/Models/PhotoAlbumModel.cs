@@ -16,6 +16,7 @@ namespace Photogaleries.Services.Models
             {
                 return pa => new PhotoAlbumModel()
                 {
+                    Id=pa.Id,
                     Name = pa.Name,
                     UserId = pa.UserId,
                     Photos = pa.Photos.Select(p => p.Id)
