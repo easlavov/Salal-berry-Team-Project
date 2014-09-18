@@ -15,7 +15,7 @@ namespace Photogaleries.Services
         public void Configuration(IAppBuilder app)
         {
             this.ConfigureAuth(app);
-            app.UseNinjectMiddleware(CreateKernel).UseNinjectWebApi(GlobalConfiguration.Configuration);
+            //app.UseNinjectMiddleware(CreateKernel).UseNinjectWebApi(GlobalConfiguration.Configuration);
         }
 
         private static StandardKernel CreateKernel()
