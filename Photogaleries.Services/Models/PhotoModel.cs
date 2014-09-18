@@ -19,7 +19,7 @@ namespace Photogaleries.Services.Models
                     Name = p.Name,
                     PhotoAlbumId = p.PhotoAlbumId,
                     Url=p.Url,
-                    Comments = p.Comments
+                    Comments = p.Comments.Select(c=>c.Id)
                 };
             }
         }
@@ -34,6 +34,6 @@ namespace Photogaleries.Services.Models
 
         public int? PhotoAlbumId { get; set; }
 
-        public IEnumerable<Comment> Comments { get; set; }
+        public IEnumerable<int> Comments { get; set; }
     }
 }
