@@ -3,7 +3,6 @@
     using System.Linq;
     using System.Web.Http;
     using System.Web.Http.Cors;
-
     using Photogaleries.Data;
     using Photogaleries.Models;
     using Photogaleries.Services.Models;
@@ -42,12 +41,12 @@
         [HttpPost]
         public IHttpActionResult Create(PhotoAlbumModel photo)
         {
+            var currentUserId = this.userIdProvider.GetUserId();
+
             if (!this.ModelState.IsValid)
             {
                 return this.BadRequest(this.ModelState);
             }
-
-            var currentUserId = this.userIdProvider.GetUserId();
 
             var newAlbum = new PhotoAlbum()
             {

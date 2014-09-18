@@ -17,10 +17,12 @@ using Photogaleries.Models;
 using Photogaleries.Services.Models;
 using Photogaleries.Services.Providers;
 using Photogaleries.Services.Results;
+using System.Web.Http.Cors;
 
 namespace Photogaleries.Services.Controllers
 {
     [Authorize]
+    [EnableCors("*","*","*")]
     [RoutePrefix("api/Account")]
     public class AccountController : ApiController
     {
