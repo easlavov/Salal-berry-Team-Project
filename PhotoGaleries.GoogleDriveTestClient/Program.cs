@@ -14,15 +14,18 @@
         {
             string serverUrl = "http://localhost:7097/";
 
+            Console.Write("Connecting to Google Drive...");
             var google = new GoogleDriveAPIController();
+            Console.WriteLine(" Connected!");
 
             var client = new HttpClient { BaseAddress = new Uri(serverUrl) };
             client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
 
-            var pics = google.UploadAll(@"..\..\Upload");
 
             Console.Write("Enter album Id: ");
             int albumId = int.Parse(Console.ReadLine());
+
+            var pics = google.UploadAll(@"..\..\Upload");
 
             foreach (var picId in pics)
             {
