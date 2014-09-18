@@ -12,11 +12,6 @@ namespace Photogaleries.Services.Controllers
     {
         protected IPhotogaleriesData Data { get; set; }
 
-        protected BaseApiController():this(new PhotogaleriesData())
-        {
-
-        }
-
         protected BaseApiController(IPhotogaleriesData data)
         {
             this.Data = data;
