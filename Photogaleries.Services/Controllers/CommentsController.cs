@@ -40,6 +40,7 @@
         public IHttpActionResult Create(CommentModel comment)
         {
             var currentUserId = this.userIdProvider.GetUserId();
+            
             if (!this.ModelState.IsValid)
             {
                 return this.BadRequest(this.ModelState);
