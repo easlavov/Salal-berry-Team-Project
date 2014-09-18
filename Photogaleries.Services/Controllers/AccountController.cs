@@ -22,7 +22,11 @@ using System.Web.Http.Cors;
 namespace Photogaleries.Services.Controllers
 {
     [Authorize]
+<<<<<<< HEAD
     [EnableCors("*", "*", "*")]
+=======
+    [EnableCors("*","*","*")]
+>>>>>>> 373bceef32374128a520831d8ce5c55df685ef89
     [RoutePrefix("api/Account")]
     public class AccountController : ApiController
     {
