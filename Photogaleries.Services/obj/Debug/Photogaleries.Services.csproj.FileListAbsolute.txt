@@ -229,3 +229,6 @@ C:\Users\ShOnZi\Desktop\TelerikAcademy\Web Services & Cloud\Homeworks\Photogaler
 C:\Users\ShOnZi\Desktop\TelerikAcademy\Web Services & Cloud\Homeworks\Photogaleries\Photogaleries.Services\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
 C:\Users\ShOnZi\Desktop\TelerikAcademy\Web Services & Cloud\Homeworks\Photogaleries\Photogaleries.Services\obj\Debug\Photogaleries.Services.dll
 C:\Users\ShOnZi\Desktop\TelerikAcademy\Web Services & Cloud\Homeworks\Photogaleries\Photogaleries.Services\obj\Debug\Photogaleries.Services.pdb
+C:\Users\ShOnZi\Desktop\TelerikAcademy\Web Services & Cloud\Homeworks\Photogaleries\Photogaleries.Services\bin\System.Web.Cors.dll
+C:\Users\ShOnZi\Desktop\TelerikAcademy\Web Services & Cloud\Homeworks\Photogaleries\Photogaleries.Services\bin\System.Web.Http.Cors.dll
+C:\Users\ShOnZi\Desktop\TelerikAcademy\Web Services & Cloud\Homeworks\Photogaleries\Photogaleries.Services\bin\System.Web.Http.Cors.xml

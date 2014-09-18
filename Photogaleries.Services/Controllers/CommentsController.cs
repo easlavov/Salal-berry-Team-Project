@@ -1,29 +1,28 @@
-﻿using Photogaleries.Data;
-using Photogaleries.Models;
-using Photogaleries.Services.Models;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Net;
-using System.Net.Http;
-using System.Web.Http;
-
-namespace Photogaleries.Services.Controllers
+﻿namespace Photogaleries.Services.Controllers
 {
+    using System.Linq;
+    using System.Web.Http;
+    using System.Web.Http.Cors;
+
+    using Photogaleries.Data;
+    using Photogaleries.Models;
+    using Photogaleries.Services.Models;
+
+    [EnableCors("*", "*", "*")]
     public class CommentsController : BaseApiController
     {
-        private AspNetUserIdProvider userIdProvider;
+        private readonly AspNetUserIdProvider userIdProvider;
 
         public CommentsController(IPhotogaleriesData data) : base(data)
         {
-            userIdProvider = new AspNetUserIdProvider();
+            this.userIdProvider = new AspNetUserIdProvider();
         }
 
         [HttpGet]
         public IHttpActionResult All()
         {
             var comments = this.Data.Comments.All().Select(CommentModel.FromComment);
-            return Ok(comments);
+            return this.Ok(comments);
         }
 
         //[HttpGet]
@@ -35,17 +34,15 @@ namespace Photogaleries.Services.Controllers
         //    {
         //        return BadRequest("There is no such comment - invalid id");
         //    }
-
         //    return Ok(photo);
         //}
-
         [Authorize]
         [HttpPost]
         public IHttpActionResult Create(CommentModel comment)
         {
             if (!this.ModelState.IsValid)
             {
-                return this.BadRequest(ModelState);
+                return this.BadRequest(this.ModelState);
             }
 
             var currentUserId = this.userIdProvider.GetUserId();
