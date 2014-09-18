@@ -1,29 +1,28 @@
-﻿using Photogaleries.Data;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Net;
-using System.Net.Http;
-using System.Web.Http;
-using Photogaleries.Services.Models;
-using Photogaleries.Models;
-
-namespace Photogaleries.Services.Controllers
+﻿namespace Photogaleries.Services.Controllers
 {
+    using System.Linq;
+    using System.Web.Http;
+    using System.Web.Http.Cors;
+
+    using Photogaleries.Data;
+    using Photogaleries.Models;
+    using Photogaleries.Services.Models;
+
+    [EnableCors("*", "*", "*")]
     public class PhotoAlbumsController : BaseApiController
     {
-        private AspNetUserIdProvider userIdProvider;
+        private readonly AspNetUserIdProvider userIdProvider;
         
         public PhotoAlbumsController(IPhotogaleriesData data) : base(data)
         {
-            userIdProvider = new AspNetUserIdProvider();
+            this.userIdProvider = new AspNetUserIdProvider();
         }
 
         [HttpGet]
         public IHttpActionResult All()
         {
             var albums = this.Data.PhotoAlbums.All().Select(PhotoAlbumModel.FromPhotoAlbum);
-            return Ok(albums);
+            return this.Ok(albums);
         }
 
         [HttpGet]
@@ -33,10 +32,10 @@ namespace Photogaleries.Services.Controllers
 
             if (album == null)
             {
-                return BadRequest("There is no such album - invalid id");
+                return this.BadRequest("There is no such album - invalid id");
             }
 
-            return Ok(album);
+            return this.Ok(album);
         }
 
         [Authorize]
@@ -45,7 +44,7 @@ namespace Photogaleries.Services.Controllers
         {
             if (!this.ModelState.IsValid)
             {
-                return this.BadRequest(ModelState);
+                return this.BadRequest(this.ModelState);
             }
 
             var currentUserId = this.userIdProvider.GetUserId();

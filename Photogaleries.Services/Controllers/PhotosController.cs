@@ -1,15 +1,14 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Net;
-using System.Net.Http;
-using System.Web.Http;
-using Photogaleries.Services.Models;
-using Photogaleries.Data;
-using Photogaleries.Models;
-
-namespace Photogaleries.Services.Controllers
+﻿namespace Photogaleries.Services.Controllers
 {
+    using System.Linq;
+    using System.Web.Http;
+    using System.Web.Http.Cors;
+
+    using Photogaleries.Data;
+    using Photogaleries.Models;
+    using Photogaleries.Services.Models;
+
+    [EnableCors("*", "*", "*")]
     public class PhotosController : BaseApiController
     {
         public PhotosController(IPhotogaleriesData data) : base(data)
@@ -20,7 +19,7 @@ namespace Photogaleries.Services.Controllers
         public IHttpActionResult All()
         {
             var photos = this.Data.Photos.All().Select(PhotoModel.FromPhoto);
-            return Ok(photos);
+            return this.Ok(photos);
         }
 
         [HttpGet]
@@ -30,10 +29,10 @@ namespace Photogaleries.Services.Controllers
 
             if (photo == null)
             {
-                return BadRequest("There is no such photo - invalid id");
+                return this.BadRequest("There is no such photo - invalid id");
             }
 
-            return Ok(photo);
+            return this.Ok(photo);
         }
 
         [Authorize]
@@ -42,7 +41,7 @@ namespace Photogaleries.Services.Controllers
         {
             if (!this.ModelState.IsValid)
             {
-                return this.BadRequest(ModelState);
+                return this.BadRequest(this.ModelState);
             }
 
             var newCourse = new Photo()
@@ -76,6 +75,5 @@ namespace Photogaleries.Services.Controllers
 
             return this.Ok(photo);
         }
-       
     }
 }

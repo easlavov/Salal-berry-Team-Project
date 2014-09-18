@@ -229,6 +229,7 @@ C:\Users\ShOnZi\Desktop\TelerikAcademy\Web Services & Cloud\Homeworks\Photogaler
 C:\Users\ShOnZi\Desktop\TelerikAcademy\Web Services & Cloud\Homeworks\Photogaleries\Photogaleries.Services\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
 C:\Users\ShOnZi\Desktop\TelerikAcademy\Web Services & Cloud\Homeworks\Photogaleries\Photogaleries.Services\obj\Debug\Photogaleries.Services.dll
 C:\Users\ShOnZi\Desktop\TelerikAcademy\Web Services & Cloud\Homeworks\Photogaleries\Photogaleries.Services\obj\Debug\Photogaleries.Services.pdb
+<<<<<<< HEAD
 C:\Users\Valentin\Desktop\Web api teamwork\Salal-berry-Team-Project\Photogaleries.Services\bin\Photogaleries.Services.dll.config
 C:\Users\Valentin\Desktop\Web api teamwork\Salal-berry-Team-Project\Photogaleries.Services\bin\Photogaleries.Services.dll
 C:\Users\Valentin\Desktop\Web api teamwork\Salal-berry-Team-Project\Photogaleries.Services\bin\Photogaleries.Services.pdb
@@ -311,3 +312,8 @@ C:\Users\Valentin\Desktop\Web api teamwork\Salal-berry-Team-Project\Photogalerie
 C:\Users\Valentin\Desktop\Web api teamwork\Salal-berry-Team-Project\Photogaleries.Services\obj\Debug\Photogaleries.Services.csprojResolveAssemblyReference.cache
 C:\Users\Valentin\Desktop\Web api teamwork\Salal-berry-Team-Project\Photogaleries.Services\obj\Debug\Photogaleries.Services.dll
 C:\Users\Valentin\Desktop\Web api teamwork\Salal-berry-Team-Project\Photogaleries.Services\obj\Debug\Photogaleries.Services.pdb
+=======
+C:\Users\ShOnZi\Desktop\TelerikAcademy\Web Services & Cloud\Homeworks\Photogaleries\Photogaleries.Services\bin\System.Web.Cors.dll
+C:\Users\ShOnZi\Desktop\TelerikAcademy\Web Services & Cloud\Homeworks\Photogaleries\Photogaleries.Services\bin\System.Web.Http.Cors.dll
+C:\Users\ShOnZi\Desktop\TelerikAcademy\Web Services & Cloud\Homeworks\Photogaleries\Photogaleries.Services\bin\System.Web.Http.Cors.xml
+>>>>>>> 7854b8f28284b1ddeb58b852bc39c96a5fc924f5
