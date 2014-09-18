@@ -4,19 +4,23 @@
             this.sourceUrl = url;
         }
 
-        Controller.prototype.register = function (email, password, confirmPassword) {
-            var data = JSON.stringify({
-                Username: email,
+        Controller.prototype.register = function (email, password) {
+            //var data = JSON.stringify({
+            //    grant_type: 'password',
+            //    username: email,
+            //    password: password
+            //});
+
+            var data = {
+                Email: email,
                 Password: password,
-                ConfirmPassword: confirmPassword
-            });
+                ConfirmPassword: password
+            };
 
             return httpRequester.post(this.sourceUrl, data)
                 .then(function(result) {
                     console.log("registered!");
-                }, function (error) {
-                    console.log("error!");
-                });
+            });
         }
 
         return Controller;
