@@ -6,7 +6,13 @@
             handlebars: 'libs/handlebars-v2.0.0',
             q: 'libs/q',
             sammy: 'libs/sammy-latest.min',
-            underscore: 'libs/underscore-min'
+            underscore: 'libs/underscore-min',
+
+            requester: 'models/http-requester',
+            controller: 'models/controller',
+            register: 'models/register',
+            photoAlbum: 'models/photoAlbum',
+            photoes: 'models/photoes'
         }
     });
 

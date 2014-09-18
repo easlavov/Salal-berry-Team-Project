@@ -46,3 +46,19 @@ C:\Users\ShOnZi\Desktop\TelerikAcademy\Web Services & Cloud\Homeworks\Photogaler
 C:\Users\ShOnZi\Desktop\TelerikAcademy\Web Services & Cloud\Homeworks\Photogaleries\Photogaleries.Data\obj\Debug\Photogaleries.Data.csprojResolveAssemblyReference.cache
 C:\Users\ShOnZi\Desktop\TelerikAcademy\Web Services & Cloud\Homeworks\Photogaleries\Photogaleries.Data\obj\Debug\Photogaleries.Data.dll
 C:\Users\ShOnZi\Desktop\TelerikAcademy\Web Services & Cloud\Homeworks\Photogaleries\Photogaleries.Data\obj\Debug\Photogaleries.Data.pdb
+C:\Users\Valentin\Desktop\Web api teamwork\Salal-berry-Team-Project\Photogaleries.Data\bin\Debug\Photogaleries.Data.dll.config
+C:\Users\Valentin\Desktop\Web api teamwork\Salal-berry-Team-Project\Photogaleries.Data\bin\Debug\Photogaleries.Data.dll
+C:\Users\Valentin\Desktop\Web api teamwork\Salal-berry-Team-Project\Photogaleries.Data\bin\Debug\Photogaleries.Data.pdb
+C:\Users\Valentin\Desktop\Web api teamwork\Salal-berry-Team-Project\Photogaleries.Data\bin\Debug\EntityFramework.dll
+C:\Users\Valentin\Desktop\Web api teamwork\Salal-berry-Team-Project\Photogaleries.Data\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Valentin\Desktop\Web api teamwork\Salal-berry-Team-Project\Photogaleries.Data\bin\Debug\Microsoft.AspNet.Identity.Core.dll
+C:\Users\Valentin\Desktop\Web api teamwork\Salal-berry-Team-Project\Photogaleries.Data\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Users\Valentin\Desktop\Web api teamwork\Salal-berry-Team-Project\Photogaleries.Data\bin\Debug\Photogaleries.Models.dll
+C:\Users\Valentin\Desktop\Web api teamwork\Salal-berry-Team-Project\Photogaleries.Data\bin\Debug\Photogaleries.Models.pdb
+C:\Users\Valentin\Desktop\Web api teamwork\Salal-berry-Team-Project\Photogaleries.Data\bin\Debug\EntityFramework.xml
+C:\Users\Valentin\Desktop\Web api teamwork\Salal-berry-Team-Project\Photogaleries.Data\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Valentin\Desktop\Web api teamwork\Salal-berry-Team-Project\Photogaleries.Data\bin\Debug\Microsoft.AspNet.Identity.Core.xml
+C:\Users\Valentin\Desktop\Web api teamwork\Salal-berry-Team-Project\Photogaleries.Data\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\Users\Valentin\Desktop\Web api teamwork\Salal-berry-Team-Project\Photogaleries.Data\obj\Debug\Photogaleries.Data.csprojResolveAssemblyReference.cache
+C:\Users\Valentin\Desktop\Web api teamwork\Salal-berry-Team-Project\Photogaleries.Data\obj\Debug\Photogaleries.Data.dll
+C:\Users\Valentin\Desktop\Web api teamwork\Salal-berry-Team-Project\Photogaleries.Data\obj\Debug\Photogaleries.Data.pdb

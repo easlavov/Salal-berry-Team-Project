@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PhotoGaleries.GoogleDrive",
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PhotoGaleries.GoogleDriveTestClient", "PhotoGaleries.GoogleDriveTestClient\PhotoGaleries.GoogleDriveTestClient.csproj", "{4A4E1ADB-DC6B-4B29-ABC8-ABC7D8CF4D99}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Photogaleries.WebClient", "Photogaleries.WebClient\Photogaleries.WebClient.csproj", "{6925F6CA-EFC6-4EAF-B876-EFCEFB9CD21B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{4A4E1ADB-DC6B-4B29-ABC8-ABC7D8CF4D99}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4A4E1ADB-DC6B-4B29-ABC8-ABC7D8CF4D99}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4A4E1ADB-DC6B-4B29-ABC8-ABC7D8CF4D99}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6925F6CA-EFC6-4EAF-B876-EFCEFB9CD21B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6925F6CA-EFC6-4EAF-B876-EFCEFB9CD21B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6925F6CA-EFC6-4EAF-B876-EFCEFB9CD21B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6925F6CA-EFC6-4EAF-B876-EFCEFB9CD21B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -67,12 +67,10 @@
     <Content Include="scripts\libs\sammy-latest.min.js" />
     <Content Include="scripts\libs\underscore-min.js" />
     <Content Include="scripts\models\http-requester.js" />
-    <Content Include="scripts\models\photoAlbum\controller.js" />
-    <Content Include="scripts\models\photoAlbum\photoAlbum.js" />
-    <Content Include="scripts\models\photoes\controller.js" />
-    <Content Include="scripts\models\photoes\photoes.js" />
-    <Content Include="scripts\models\register\controller.js" />
-    <Content Include="scripts\models\register\register.js" />
+    <Content Include="scripts\models\photoAlbum.js" />
+    <Content Include="scripts\models\photoes.js" />
+    <Content Include="scripts\models\controller.js" />
+    <Content Include="scripts\models\register.js" />
     <Content Include="styles\styles.css">
       <DependentUpon>styles.less</DependentUpon>
     </Content>
@@ -93,7 +91,11 @@
       <DependentUpon>Web.config</DependentUpon>
     </None>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="scripts\models\photoAlbum\" />
+    <Folder Include="scripts\models\photoes\" />
+    <Folder Include="scripts\models\register\" />
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
