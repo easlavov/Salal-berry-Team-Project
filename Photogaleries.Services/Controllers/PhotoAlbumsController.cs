@@ -2,12 +2,10 @@
 {
     using System.Linq;
     using System.Web.Http;
-    using System.Web.Http.Cors;
     using Photogaleries.Data;
     using Photogaleries.Models;
     using Photogaleries.Services.Models;
-
-    [EnableCors("*", "*", "*")]
+   
     public class PhotoAlbumsController : BaseApiController
     {
         private readonly AspNetUserIdProvider userIdProvider;

@@ -2,13 +2,11 @@
 {
     using System.Linq;
     using System.Web.Http;
-    using System.Web.Http.Cors;
 
     using Photogaleries.Data;
     using Photogaleries.Models;
     using Photogaleries.Services.Models;
 
-    [EnableCors("*", "*", "*")]
     public class PhotosController : BaseApiController
     {
         public PhotosController(IPhotogaleriesData data) : base(data)
@@ -19,6 +17,13 @@
         public IHttpActionResult All()
         {
             var photos = this.Data.Photos.All().Select(PhotoModel.FromPhoto);
+            return this.Ok(photos);
+        }
+
+        [HttpGet]
+        public IHttpActionResult GetByAlbumId(int albumId)
+        {
+            var photos = this.Data.Photos.All().Where(p=>p.PhotoAlbumId==albumId).Select(PhotoModel.FromPhoto);
             return this.Ok(photos);
         }
 

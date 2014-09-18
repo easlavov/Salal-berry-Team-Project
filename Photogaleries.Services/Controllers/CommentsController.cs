@@ -2,12 +2,12 @@
 {
     using System.Linq;
     using System.Web.Http;
-    using System.Web.Http.Cors;
+
     using Photogaleries.Data;
     using Photogaleries.Models;
     using Photogaleries.Services.Models;
 
-    [EnableCors("*", "*", "*")]
+
     public class CommentsController : BaseApiController
     {
         private readonly AspNetUserIdProvider userIdProvider;
@@ -24,17 +24,14 @@
             return this.Ok(comments);
         }
 
-        //[HttpGet]
-        //public IHttpActionResult GetById(int id)
-        //{
-        //    var photo = this.Data.Photos.All().Where(p => p == p).Select(PhotoModel.FromPhoto).FirstOrDefault();
+        [HttpGet]
+        public IHttpActionResult GetByPhotoId(int photoId)
+        {
+            var photo = this.Data.Comments.All().Where(p => p.PhotoId == photoId).Select(CommentModel.FromComment);
 
-        //    if (photo == null)
-        //    {
-        //        return BadRequest("There is no such comment - invalid id");
-        //    }
-        //    return Ok(photo);
-        //}
+            return Ok(photo);
+        }
+
         [Authorize]
         [HttpPost]
         public IHttpActionResult Create(CommentModel comment)
