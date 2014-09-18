@@ -63,7 +63,7 @@
             return result;
         }
 
-        public string GetPictureUrl(string fileId)
+        public PhotoInfo GetPictureInfo(string fileId)
         {
             try
             {
@@ -75,12 +75,30 @@
                 int index = downloadUrl.LastIndexOf("&");
                 string viewUrl = downloadUrl.Substring(0, index);
 
-                return viewUrl;
+                var result = new PhotoInfo()
+                {
+                    Name = file.Title,
+                    Url = viewUrl,
+                };
+
+                return result;
             }
             catch (Exception e)
             {
-                return null;
+                return new PhotoInfo();
             }
+        }
+
+        public string GetPictureUrl(string fileId)
+        {
+            var result = GetPictureInfo(fileId);
+            return result.Url;
+        }
+
+        public string GetPictureName(string fileId)
+        {
+            var result = GetPictureInfo(fileId);
+            return result.Name;
         }
 
         public ICollection<string> AllFiles()

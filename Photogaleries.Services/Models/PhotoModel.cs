@@ -16,6 +16,7 @@ namespace Photogaleries.Services.Models
             {
                 return p => new PhotoModel()
                 {
+                    Id=p.Id,
                     Name = p.Name,
                     PhotoAlbumId = p.PhotoAlbumId,
                     Url=p.Url,
