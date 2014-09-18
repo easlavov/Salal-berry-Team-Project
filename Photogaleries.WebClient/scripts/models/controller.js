@@ -16,8 +16,7 @@
         function renderAlbums(data) {
             var albums = data;
            
-            for (var i = 0; i < albums.length-1; i++) {
-               
+            for (var i = 0; i < albums.length - 1; i++) {
                 $('#wrapper')
                     .append($('<div/>')
                         .append($('<span/>').text(albums[i].Name))
@@ -31,7 +30,6 @@
                                 if (album !== 'undefined') {
                                     var photos = album.Photos;
                                     renderPhotos(photos);
-                                    
                                 }
                             }))
                         .append($('<br/>')));
@@ -88,6 +86,20 @@
                     console.log("registered!");
                 });
         }
+        
+        Controller.prototype.login = function (email, password) {
+            var data = {
+                grant_type: 'password',
+                Email: email,
+                Password: password
+            };
+        
+            return httpRequester.post(this.sourceUrl, data)
+                .then(function (result) {
+                    console.log('logged');
+                    console.log(result);
+                });
+        };
 
         return Controller;
     }());

@@ -67,6 +67,7 @@
     <Content Include="scripts\libs\sammy-latest.min.js" />
     <Content Include="scripts\libs\underscore-min.js" />
     <Content Include="scripts\models\http-requester.js" />
+    <Content Include="scripts\models\login.js" />
     <Content Include="scripts\models\photoAlbum.js" />
     <Content Include="scripts\models\controller.js" />
     <Content Include="scripts\models\register.js" />
