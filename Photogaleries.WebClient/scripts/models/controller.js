@@ -4,12 +4,17 @@
             this.sourceUrl = url;
         }
 
-        Controller.prototype.getMsg = function () {
-            return httpRequester.get(this.sourceUrl);
-        }
+        Controller.prototype.register = function (email, password) {
+            var data = JSON.stringify({
+                grant_type: 'password',
+                username: email,
+                password: password
+            });
 
-        Controller.prototype.sendMsg = function (data) {
-            return httpRequester.post(this.sourceUrl, data);
+            return httpRequester.post(this.sourceUrl, data)
+                .then(function(result) {
+                    console.log("registered!");
+            });
         }
 
         return Controller;

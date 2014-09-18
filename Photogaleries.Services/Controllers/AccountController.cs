@@ -17,10 +17,12 @@ using Photogaleries.Models;
 using Photogaleries.Services.Models;
 using Photogaleries.Services.Providers;
 using Photogaleries.Services.Results;
+using System.Web.Http.Cors;
 
 namespace Photogaleries.Services.Controllers
 {
     [Authorize]
+    [EnableCors("*", "*", "*")]
     [RoutePrefix("api/Account")]
     public class AccountController : ApiController
     {
@@ -167,9 +169,9 @@ namespace Photogaleries.Services.Controllers
 
             AuthenticationTicket ticket = AccessTokenFormat.Unprotect(model.ExternalAccessToken);
 
-            if (ticket == null || ticket.Identity == null || (ticket.Properties != null
-                && ticket.Properties.ExpiresUtc.HasValue
-                && ticket.Properties.ExpiresUtc.Value < DateTimeOffset.UtcNow))
+            if (ticket == null || ticket.Identity == null || (ticket.Properties != null &&
+                                                              ticket.Properties.ExpiresUtc.HasValue &&
+                                                              ticket.Properties.ExpiresUtc.Value < DateTimeOffset.UtcNow))
             {
                 return BadRequest("External login failure.");
             }
@@ -260,7 +262,7 @@ namespace Photogaleries.Services.Controllers
             {
                 Authentication.SignOut(DefaultAuthenticationTypes.ExternalCookie);
                 
-                 ClaimsIdentity oAuthIdentity = await user.GenerateUserIdentityAsync(UserManager,
+                ClaimsIdentity oAuthIdentity = await user.GenerateUserIdentityAsync(UserManager,
                     OAuthDefaults.AuthenticationType);
                 ClaimsIdentity cookieIdentity = await user.GenerateUserIdentityAsync(UserManager,
                     CookieAuthenticationDefaults.AuthenticationType);
@@ -320,6 +322,8 @@ namespace Photogaleries.Services.Controllers
         }
 
         // POST api/Account/Register
+        
+        [EnableCors("*", "*", "*")]
         [AllowAnonymous]
         [Route("Register")]
         public async Task<IHttpActionResult> Register(RegisterBindingModel model)
@@ -388,7 +392,10 @@ namespace Photogaleries.Services.Controllers
 
         private IAuthenticationManager Authentication
         {
-            get { return Request.GetOwinContext().Authentication; }
+            get
+            {
+                return Request.GetOwinContext().Authentication;
+            }
         }
 
         private IHttpActionResult GetErrorResult(IdentityResult result)
@@ -423,7 +430,9 @@ namespace Photogaleries.Services.Controllers
         private class ExternalLoginData
         {
             public string LoginProvider { get; set; }
+
             public string ProviderKey { get; set; }
+
             public string UserName { get; set; }
 
             public IList<Claim> GetClaims()
@@ -448,8 +457,8 @@ namespace Photogaleries.Services.Controllers
 
                 Claim providerKeyClaim = identity.FindFirst(ClaimTypes.NameIdentifier);
 
-                if (providerKeyClaim == null || String.IsNullOrEmpty(providerKeyClaim.Issuer)
-                    || String.IsNullOrEmpty(providerKeyClaim.Value))
+                if (providerKeyClaim == null || String.IsNullOrEmpty(providerKeyClaim.Issuer) ||
+                    String.IsNullOrEmpty(providerKeyClaim.Value))
                 {
                     return null;
                 }
@@ -488,7 +497,7 @@ namespace Photogaleries.Services.Controllers
                 return HttpServerUtility.UrlTokenEncode(data);
             }
         }
-
+        
         #endregion
     }
 }

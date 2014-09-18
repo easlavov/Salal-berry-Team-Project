@@ -10,13 +10,18 @@
 
             requester: 'models/http-requester',
             controller: 'models/controller',
+            registerUi: 'models/register',
             register: 'models/register',
             photoAlbum: 'models/photoAlbum',
             photoes: 'models/photoes'
         }
     });
 
-    require(['underscore', 'handlebars', 'sammy'], function () {
-        console.log('Successful setup!');
+    require(['jquery', 'registerUi', 'sammy', 'underscore', 'handlebars'], function ($, registerUi, Sammy) {
+        var app = Sammy('#register-form', function () {
+            this.get("#/register", function () {
+            });
+        });
+        app.run('#/register');
     });
 })()

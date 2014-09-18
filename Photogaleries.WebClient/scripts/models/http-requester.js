@@ -7,6 +7,7 @@
                 url: url,
                 type: type,
                 data: data,
+                contentType: 'application/json',
                 success: function (resultData) {
                     deferred.resolve(resultData);
                 },
