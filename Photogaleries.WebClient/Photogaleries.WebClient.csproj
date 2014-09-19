@@ -74,6 +74,12 @@
     <Content Include="styles\styles.css">
       <DependentUpon>styles.less</DependentUpon>
     </Content>
+    <Content Include="styles\styles.min.css">
+      <DependentUpon>styles.css</DependentUpon>
+    </Content>
+    <Content Include="views\home.html" />
+    <Content Include="views\login.html" />
+    <Content Include="views\register.html" />
     <Content Include="Web.config" />
     <Content Include="styles\styles.less" />
     <Content Include="styles\styles.css.map">

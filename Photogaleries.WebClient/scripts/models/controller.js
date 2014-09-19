@@ -15,10 +15,10 @@
 
         function renderAlbums(data) {
             var albums = data;
-           
+
             for (var i = 0; i < albums.length; i++) {
                 $('#wrapper')
-                    .append($('<div/>')
+                    .append($('<div/>').addClass("menu")
                         .append($('<span/>').text(albums[i].Name))
                         .append($('<button/>')
                             .text('Album')
@@ -53,6 +53,37 @@
             //}));
         }
 
+        function renderPhoto(photo) {
+            $('#wrapper')
+                .append($('<img>', { id: photo.Id, src: photo.Url, width: '300px', heigth: '200px' })
+                    .addClass('album-photo')
+                    .attr('margin', '10px')).on('click', function () {
+                        $('#wrapper').empty();
+
+                        $('#wrapper').append($('<img>', { src: photo.Url, width: '500px', heigth: '400px' }));
+                        var comments = photo.Comments;
+                        for (var i = 0; i < comments.length; i++) {
+                            $('#wrapper').append($('<div>').text(comments.text));
+                        }
+
+                        $('#wrapper').append(comment.Input);
+                        $('#wrapper').append($('<button>').text('Post comment').on('click', function myfunction() {
+                            createComment(photo.Id, '#comment-input', photo);
+                        }));
+                    });
+        }
+
+        function createComment(id, input, photo) {
+            var data = {
+                Text: input.val(),
+                Date: new Date(),
+                PhotoId: id
+            };
+
+            httpRequester.createComment('http://localhost:7097/api/Comments/Create', data, token);
+            renderPhoto(photo);
+        }
+
         function getPhoto(sourceUrl) {
             httpRequester.get(sourceUrl)
                 .then(function (result) {
@@ -60,13 +91,13 @@
                 });
         };
 
-        function renderPhoto(photo) {
-            $('#wrapper')              
-                .append($('<img>', { id: photo.Id, src: photo.Url, width: '300px', heigth: '200px' })
-                    .addClass('album-photo')
-                    .attr('margin', '10px'));
-            //To DO: add event for enlarging and showing the comments...
-        }
+        //function renderPhoto(photo) {
+        //    $('#wrapper')              
+        //        .append($('<img>', { id: photo.Id, src: photo.Url, width: '300px', heigth: '200px' })
+        //            .addClass('album-photo')
+        //            .attr('margin', '10px'));
+        //    //To DO: add event for enlarging and showing the comments...
+        //}
 
         Controller.prototype.getAlbums = function () {
             httpRequester.get(this.sourceUrl)
@@ -83,18 +114,18 @@
             };
 
             return httpRequester.post(this.sourceUrl, data)
-                .then(function(result) {
+                .then(function (result) {
                     console.log("registered!");
                 });
         }
-        
+
         Controller.prototype.login = function (email, password) {
             var data = {
                 grant_type: 'password',
                 Email: email,
                 Password: password
             };
-        
+
             return httpRequester.post(this.sourceUrl, data)
                 .then(function (result) {
                     console.log('logged');
