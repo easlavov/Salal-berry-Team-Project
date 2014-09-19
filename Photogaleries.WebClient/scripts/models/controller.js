@@ -40,16 +40,16 @@
             var photos = data;
 
             for (var i = 0; i < photos.length; i++) {
-                pausecomp(120);
                 getPhoto('http://localhost:7097/api/Photos/GetById/' + photos[i]);
+                pausecomp(150);
             }
-            $('#wrapper').append($('<div/>'.text('Go back').on('click', function () {
-                $('#wrapper').empty();
-                httpRequester.get('http://localhost:7097/api/PhotoAlbums/All')
-                    .then(function (result) {
-                        renderAlbums(result);
-                    });
-            })))
+            //$('#wrapper').append($('<button/>').text('Go back').on('click', function () {
+            //    $('#wrapper').empty();
+            //    httpRequester.get('http://localhost:7097/api/PhotoAlbums/All')
+            //        .then(function (result) {
+            //            renderAlbums(result);
+            //        });
+            //}));
         }
 
         function getPhoto(sourceUrl) {
@@ -97,6 +97,7 @@
             return httpRequester.post(this.sourceUrl, data)
                 .then(function (result) {
                     console.log('logged');
+
                     console.log(result);
                 });
         };
