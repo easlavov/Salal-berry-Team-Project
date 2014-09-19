@@ -16,17 +16,18 @@
         function renderAlbums(data) {
             var albums = data;
            
-            for (var i = 0; i < albums.length-1; i++) {
+            for (var i = 0; i < albums.length; i++) {
                 $('#wrapper')
                     .append($('<div/>')
                         .append($('<span/>').text(albums[i].Name))
                         .append($('<button/>')
                             .text('Album')
-                            .attr('id', albums[i].id)
+                            .attr('id', i)
                             .on('click', function () {
                                 $('#wrapper').empty();
-                                
-                                var album = albums[i];
+                                $this = $(this);
+                                index = $this.attr('id');
+                                var album = albums[index];
                                 if (album !== 'undefined') {
                                     var photos = album.Photos;
                                     renderPhotos(photos);
